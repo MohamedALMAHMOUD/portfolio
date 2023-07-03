@@ -2,7 +2,7 @@
 
 // Ajoutez votre code JavaScript ici
 const textElement = document.querySelector('.type-machine');
-const textToType = "Je suis fasciné par l'informatique, autodidacte et je me forme en permanence en Python, SQL et Machine Learning. J'aime le nouveau chalenge et je suis ouvert à toute proposition dans le domaine de l'informatique.. Je suis quelqu'un très motivé et force de propositions, j'aime l'échange et le travail en équipe.";
+const textToType = "Je suis fasciné par l'informatique, autodidacte et je me forme en permanence en Python, SQL et Machine Learning. J'aime le nouveau chalenge et je suis ouvert à toute proposition dans le domaine de la data. Je suis quelqu'un très motivé et force de propositions, j'aime l'échange et le travail en équipe.";
 let index = 0;
 
 function typeWriter() {
