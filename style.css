@@ -4,7 +4,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20;
   
   background: #23E3C9;
 }
@@ -48,8 +48,8 @@ nav ul li a {
 }
 
 .slides{
-  width: 500%;
-  height: 500px;
+  width: 1280px;
+  height: 400px;
   display: flex;
 }
 
