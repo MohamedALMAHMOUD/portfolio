@@ -14,4 +14,7 @@ function typeWriter() {
 }
 
 typeWriter();
+$('.carousel').slick({
+  // Options du carousel
+});
 
