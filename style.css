@@ -5,10 +5,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
   background: #23E3C9;
 }
 
