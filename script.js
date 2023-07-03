@@ -14,7 +14,11 @@ function typeWriter() {
 }
 
 typeWriter();
-$('.carousel').slick({
-  // Options du carousel
+$(document).ready(function(){
+  $('.carousel').slick({
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 3000
+  });
 });
 

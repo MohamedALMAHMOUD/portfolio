@@ -31,8 +31,14 @@ nav ul li a {
 
 /* Styles pour le carousel */
 .carousel {
-  /* Styles pour le carousel ici */
+  width: 80%;
+  margin: 0 auto;
 }
+
+.carousel img {
+  width: 100%;
+}
+
 footer {
   background-color: #333;
   color: #fff;
