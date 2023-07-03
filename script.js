@@ -1,17 +1,17 @@
 // script.js
 
 // Ajoutez votre code JavaScript ici
-const textElement = document.getElementById('typewriter-text');
-const text = "Bienvenue sur mon portfolio.";
+const textElement = document.querySelector('.type-machine');
+const textToType = 'Bonjour, je suis un texte de type machine à écrire !';
 let index = 0;
 
-function type() {
-  if (index < text.length) {
-    textElement.innerHTML += text.charAt(index);
+function typeWriter() {
+  if (index < textToType.length) {
+    textElement.textContent += textToType.charAt(index);
     index++;
-    setTimeout(type, 50); // Vitesse de frappe, ajustez-la selon vos préférences
+    setTimeout(typeWriter, 50); // Vitesse de défilement du texte (en millisecondes)
   }
 }
 
-type();
+typeWriter();
 
