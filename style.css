@@ -4,8 +4,11 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20;
-  
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #23E3C9;
 }
 
@@ -71,7 +74,7 @@ nav ul li a {
 
 .navigation-manual{
   position: absolute;
-  width: 800px;
+  width: 1280px;
   margin-top: -40px;
   display: flex;
   justify-content: center;
