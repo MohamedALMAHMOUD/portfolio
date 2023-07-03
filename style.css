@@ -66,8 +66,8 @@ nav ul li a {
 }
 
 .slide img{
-  width: 800px;
-  height: 500px;
+  width: 1280px;
+  height: 400px;
 }
 
 /*css for manual slide navigation*/
@@ -117,9 +117,9 @@ nav ul li a {
 .navigation-auto{
   position: absolute;
   display: flex;
-  width: 800px;
+  width: 1280px;
   justify-content: center;
-  margin-top: 460px;
+  margin-top: 360px;
 }
 
 .navigation-auto div{
