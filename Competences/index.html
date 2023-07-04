@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="https://mohamedalmahmoud.github.io/portfolio/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-U6QNSedvvff8adPC8bVbQJ4mgdAn4WkRxwXXPxygCGu1uVe+W51UxuR07xk6HWdWv9M/+JxR7ZICdr3EYU9DKg==" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Votre contenu ici -->
@@ -52,7 +53,7 @@
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="../Projects/index.html">Projets</a></li>
-                <li><a href="index.php">Compétences</a></li>
+                <li><a href="index.html">Compétences</a></li>
                 <li><a href="../CV/index.html">CV</a></li>
             </ul>
         </nav>
@@ -68,12 +69,17 @@
                        en parallèle. Tout cela m'a permis de me reconvertir facilment en Data
                         science en début de 2021. C'est l'effet de boule de neige. Voici un apperçu
                          des mes compétences polyvalentes:</p>
-                         <pre>
-                            <?php
-                            $code = '<?php echo "Hello, World!"; ?>';
-                            highlight_string($code);
-                            ?>
-                        </pre>
+                         <div id="code-editor">
+                          import pandas as pd
+                          data = pd.read_csv("file.csv")
+                          print(data)
+                         </div>
+
+                         <script>
+                             var editor = ace.edit("code-editor");
+                             editor.setTheme("ace/theme/monokai");
+                             editor.session.setMode("ace/mode/javascript");
+                         </script>        
                 <ol class="c">
                     <li>Python</li>
                     <li>Wordpress</li>

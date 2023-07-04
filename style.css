@@ -97,3 +97,7 @@ img {vertical-align: middle;}
 ol.c {
   list-style-type: upper-roman;
 }
+#code-editor {
+  height: 400px;
+  width: 100%;
+}
