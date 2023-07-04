@@ -135,3 +135,7 @@ ol.c {
 	top: 3px;
 	left: 10px;
 }
+.copy-code.animate {
+  transform: scale(1.2);
+  background-color: #ffcc00;
+}
