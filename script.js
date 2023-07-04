@@ -14,14 +14,3 @@ function typeWriter() {
 }
 
 typeWriter();
-// Fonction pour copier le contenu de l'éditeur de code dans le presse-papiers
-function copyCode() {
-  var codeEditor = document.getElementById("code-editor");
-  codeEditor.select();
-  document.execCommand("copy");
-  alert("Le code a été copié !");
-}
-
-// Ajoute un gestionnaire d'événements au bouton "Copier le code"
-var copyButton = document.getElementById("copy-button");
-copyButton.addEventListener("click", copyCode);
