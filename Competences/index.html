@@ -69,10 +69,11 @@
                        en parallèle. Tout cela m'a permis de me reconvertir facilment en Data
                         science en début de 2021. C'est l'effet de boule de neige. Voici un apperçu
                          des mes compétences polyvalentes:</p>
-                <div id="code-editor">
-                  import pandas as pd
-                  data = pd.read_csv("file.csv")
-                  print(data)
+                         <textarea id="code-editor" placeholder="import pandas as pd
+                         data = pd.read_csv("file.csv")
+                         print(data)"></textarea>
+                         <button id="copy-button">Copier le code</button>
+                
                 </div>      
                 <button onclick="copyCode()">Copier le Code</button>
                 <ol class="c">
@@ -83,26 +84,6 @@
         </section>
 
     </main>   
-    <script>
-      // Attendre que le DOM soit chargé avant d'initialiser l'éditeur Ace
-      document.addEventListener("DOMContentLoaded", function() {
-          var editor = ace.edit("code-editor");
-          editor.setTheme("ace/theme/monokai");
-          editor.session.setMode("ace/mode/javascript");
-      });
-
-      function copyCode() {
-          var editor = ace.edit("code-editor");
-          var code = editor.getValue();
-          navigator.clipboard.writeText(code)
-              .then(function() {
-                  alert("Code copied to clipboard!");
-              })
-              .catch(function() {
-                  alert("Unable to copy code to clipboard.");
-              });
-      }
-  </script>
 <script src="script.js"></script>
 </body>
 </html>

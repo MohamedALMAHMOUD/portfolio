@@ -98,7 +98,9 @@ ol.c {
   list-style-type: upper-roman;
 }
 #code-editor {
-  height: 400px;
-  width: 100%;
-  background: #333;
+  width: 500px;
+  height: 300px;
+  border: 1px solid #333;
+  font-family: monospace;
+  padding: 10px;
 }

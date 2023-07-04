@@ -14,9 +14,14 @@ function typeWriter() {
 }
 
 typeWriter();
-var codeEditor = ace.edit("code-editor");
-codeEditor.setTheme("ace/theme/monokai"); // définissez le thème souhaité
-codeEditor.session.setMode("ace/mode/javascript"); // spécifiez le langage de programmation approprié
+// Fonction pour copier le contenu de l'éditeur de code dans le presse-papiers
+function copyCode() {
+  var codeEditor = document.getElementById("code-editor");
+  codeEditor.select();
+  document.execCommand("copy");
+  alert("Le code a été copié !");
+}
 
-var code = codeEditor.getValue();
-console.log(code);
+// Ajoute un gestionnaire d'événements au bouton "Copier le code"
+var copyButton = document.getElementById("copy-button");
+copyButton.addEventListener("click", copyCode);
