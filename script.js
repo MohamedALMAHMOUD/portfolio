@@ -14,22 +14,11 @@ function typeWriter() {
 }
 
 typeWriter();
-var textarea = document.querySelector(".editor");
-var editor = CodeMirror.fromTextArea(textarea, {
-  theme: "berry-dark",
-  lineNumbers: true,
-  indentUnit: 4,
-  indentWithTabs: true,
-});
 
-document.querySelector(".copy-code-wrap").onclick = function() {
-  editor.focus(); // Mettre l'éditeur de code en focus
-  editor.execCommand("selectAll"); // Sélectionner tout le texte dans l'éditeur
-  document.execCommand("copy"); // Copier le texte sélectionné
+  var editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
+    lineNumbers: true,  // Afficher les numéros de ligne
+    mode: "text/html",  // Définir le mode de coloration syntaxique (HTML, CSS, JavaScript, etc.)
+    theme: "default"  // Choisir un thème pour l'éditeur
+    // Autres options que vous souhaitez configurer
+  });
 
-  var copy = document.querySelector(".copy-code");
-  copy.classList.add("animate");
-  setTimeout(function () {
-    copy.classList.remove("animate");
-  }, 200);
-};
