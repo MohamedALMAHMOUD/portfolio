@@ -52,23 +52,36 @@
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="../Projects/index.html">Projets</a></li>
-                <li><a href="../Competences/index.php">Compétences</a></li>
-                <li><a href="index.html">CV</a></li>
+                <li><a href="index.php">Compétences</a></li>
+                <li><a href="../CV/index.html">CV</a></li>
             </ul>
         </nav>
     </header>
     <main>
 
-        <section id="cv">
-            <h2>Curriculum vitae</h2>
+        <section id="competences">
+            <h2>Compétences</h2>
+                <p>Depuis 2012, je cumule des compéténces polyvalents. En effet,
+                     alors que je me suis concentré sur ma thèse à l'époque,
+                      la création des sites internet, la création des applications,
+                       l'apprentissage des languages de programmation, etc. se développaient 
+                       en parallèle. Tout cela m'a permis de me reconvertir facilment en Data
+                        science en début de 2021. C'est l'effet de boule de neige. Voici un apperçu
+                         des mes compétences polyvalentes:</p>
+                <pre>
+                <?php
+                $code = '<?php echo "Hello, World!"; ?>';
+                highlight_string($code);
+                ?>
+                </pre>
+                <ol class="c">
+                    <li>Python</li>
+                    <li>Wordpress</li>
+                    <li>Applications</li>
+                </ol>
         </section>
 
-    </main>
-    <div class="carousel">
-        <center> Vous pouvez télécharger mon CV <a href="Cv-Fr-DS.pdf">ICI</a></center>
-    </div>
-
-    
+    </main>   
 
     <script src="script.js"></script>
 </body>

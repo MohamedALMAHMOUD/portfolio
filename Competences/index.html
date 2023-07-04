@@ -52,7 +52,7 @@
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
                 <li><a href="../Projects/index.html">Projets</a></li>
-                <li><a href="index.html">Compétences</a></li>
+                <li><a href="index.php">Compétences</a></li>
                 <li><a href="../CV/index.html">CV</a></li>
             </ul>
         </nav>
@@ -68,7 +68,12 @@
                        en parallèle. Tout cela m'a permis de me reconvertir facilment en Data
                         science en début de 2021. C'est l'effet de boule de neige. Voici un apperçu
                          des mes compétences polyvalentes:</p>
-                <p> Voir un code <a href="code.php">ICI</a></p>
+                         <pre>
+                            <?php
+                            $code = '<?php echo "Hello, World!"; ?>';
+                            highlight_string($code);
+                            ?>
+                        </pre>
                 <ol class="c">
                     <li>Python</li>
                     <li>Wordpress</li>
