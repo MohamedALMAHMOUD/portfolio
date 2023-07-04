@@ -14,3 +14,22 @@ function typeWriter() {
 }
 
 typeWriter();
+function copyCode() {
+  // Récupérer le contenu de l'éditeur de code
+  var code = document.getElementById("code-editor").value;
+
+  // Créer un élément temporaire (input) pour copier le code dans le presse-papiers
+  var tempInput = document.createElement("textarea");
+  document.body.appendChild(tempInput);
+  tempInput.value = code;
+  tempInput.select();
+
+  // Exécuter la commande de copie
+  document.execCommand("copy");
+
+  // Supprimer l'élément temporaire
+  document.body.removeChild(tempInput);
+
+  // Afficher un message pour informer que le code a été copié
+  alert("Le code a été copié dans le presse-papiers.");
+}
