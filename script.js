@@ -14,22 +14,25 @@ function typeWriter() {
 }
 
 typeWriter();
+var codeEditor = CodeMirror(document.getElementById("code"), {
+  value: "",
+  mode: "htmlmixed",
+  lineNumbers: true,
+  theme: "default"
+});
+
+// Fonction pour copier le contenu de l'éditeur de code dans le presse-papiers
 function copyCode() {
-  // Récupérer le contenu de l'éditeur de code
-  var code = document.getElementById("code-editor").value;
-
-  // Créer un élément temporaire (input) pour copier le code dans le presse-papiers
-  var tempInput = document.createElement("textarea");
-  document.body.appendChild(tempInput);
-  tempInput.value = code;
-  tempInput.select();
-
-  // Exécuter la commande de copie
-  document.execCommand("copy");
-
-  // Supprimer l'élément temporaire
-  document.body.removeChild(tempInput);
-
-  // Afficher un message pour informer que le code a été copié
-  alert("Le code a été copié dans le presse-papiers.");
+  var code = codeEditor.getValue();
+  navigator.clipboard.writeText(code)
+    .then(function() {
+      alert("Le code a été copié !");
+    })
+    .catch(function() {
+      alert("Impossible de copier le code.");
+    });
 }
+
+// Ajouter un écouteur d'événement au bouton de copie
+var copyButton = document.getElementById("copy-button");
+copyButton.addEventListener("click", copyCode);

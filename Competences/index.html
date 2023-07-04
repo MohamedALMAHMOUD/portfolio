@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="https://mohamedalmahmoud.github.io/portfolio/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js" integrity="sha512-U6QNSedvvff8adPC8bVbQJ4mgdAn4WkRxwXXPxygCGu1uVe+W51UxuR07xk6HWdWv9M/+JxR7ZICdr3EYU9DKg==" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.css">
+  </head>
 <body>
     <!-- Votre contenu ici -->
     <center><h1>Mohamed ALMAHMOUD</h1><h4>Data scientist | Data analyst </h4><h6>Docteur en didactique des mathématiques</h6></center>
@@ -69,11 +69,8 @@
                        en parallèle. Tout cela m'a permis de me reconvertir facilment en Data
                         science en début de 2021. C'est l'effet de boule de neige. Voici un apperçu
                          des mes compétences polyvalentes:</p>
-                         <textarea id="code-editor" placeholder=
-                         ''>import pandas as pd
-                         data = pd.read_csv("file.csv")
-                         print(data)</textarea>
-                         <button id="copy-button">Copier le code</button>
+                <div class="code-editor" id="code">import pandas as pd</div>
+                <button class="copy-button" id="copy-button">Copier le code</button>
                 <ol class="c">
                     <li>Python</li>
                     <li>Wordpress</li>
@@ -83,5 +80,9 @@
 
     </main>   
 <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/codemirror.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/htmlmixed/htmlmixed.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/css/css.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.0/mode/javascript/javascript.js"></script>
 </body>
 </html>
