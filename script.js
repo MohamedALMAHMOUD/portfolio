@@ -14,25 +14,41 @@ function typeWriter() {
 }
 
 typeWriter();
-var codeEditor = CodeMirror(document.getElementById("code"), {
-  value: "",
-  mode: "htmlmixed",
-  lineNumbers: true,
-  theme: "default"
+const $ = function (selector, bind) {
+	var bind = bind === undefined ? document : bind;
+	let nodes = bind.querySelectorAll.bind(bind)(selector);
+	return nodes.length == 1 ? nodes[0] : nodes;
+};
+var textarea = $(".editor");
+var editor = CodeMirror.fromTextArea(textarea, {
+	theme: "berry-dark",
+	autoRefresh: true,
+	firstLineNumber: 1,
+	lineNumbers: true,
+	smartIndent: true,
+	lineWrapping: true,
+	indentWithTabs: true,
+	refresh: true
 });
+editor.removeTag = CodeMirror.removeTag;
+var cm = $(".CodeMirror");
+cm.editor = editor;
+editor.save();
+editor.setOption("mode", "htmlmixed");
 
-// Fonction pour copier le contenu de l'éditeur de code dans le presse-papiers
-function copyCode() {
-  var code = codeEditor.getValue();
-  navigator.clipboard.writeText(code)
-    .then(function() {
-      alert("Le code a été copié !");
-    })
-    .catch(function() {
-      alert("Impossible de copier le code.");
-    });
-}
+$(".copy-code-wrap").onclick = function (e) {
+	if (e.which == 1) {
+		// write the text to the clipboard
+		navigator.clipboard.writeText(editor.getValue());
 
-// Ajouter un écouteur d'événement au bouton de copie
-var copyButton = document.getElementById("copy-button");
-copyButton.addEventListener("click", copyCode);
+		// animate the button
+		var copy = $(".copy-code", this);
+		function quickadd() {
+			copy.classList.add("animate");
+			setTimeout(function () {
+				copy.classList.remove("animate");
+			}, 200);
+		}
+		quickadd();
+	}
+};
