@@ -16,19 +16,20 @@ function typeWriter() {
 typeWriter();
 var textarea = document.querySelector(".editor");
 var editor = CodeMirror.fromTextArea(textarea, {
-	theme: "berry-dark",
-	lineNumbers: true,
-	indentUnit: 4,
-	indentWithTabs: true,
+  theme: "berry-dark",
+  lineNumbers: true,
+  indentUnit: 4,
+  indentWithTabs: true,
 });
 
 document.querySelector(".copy-code-wrap").onclick = function() {
-	navigator.clipboard.writeText(editor.getValue());
+  editor.focus(); // Mettre l'éditeur de code en focus
+  editor.execCommand("selectAll"); // Sélectionner tout le texte dans l'éditeur
+  document.execCommand("copy"); // Copier le texte sélectionné
 
-	var copy = document.querySelector(".copy-code");
-	copy.classList.add("animate");
-	setTimeout(function () {
-		copy.classList.remove("animate");
-	}, 200);
+  var copy = document.querySelector(".copy-code");
+  copy.classList.add("animate");
+  setTimeout(function () {
+    copy.classList.remove("animate");
+  }, 200);
 };
-
