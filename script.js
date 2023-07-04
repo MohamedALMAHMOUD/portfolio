@@ -15,7 +15,18 @@ function typeWriter() {
 
 typeWriter();
 var editor = ace.edit("code-editor");
-                             editor.setTheme("ace/theme/monokai");
-                             editor.session.setMode("ace/mode/javascript");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/javascript");
+
+        function copyCode() {
+            var code = editor.getValue();
+            navigator.clipboard.writeText(code)
+                .then(function() {
+                    alert("Code copied to clipboard!");
+                })
+                .catch(function() {
+                    alert("Unable to copy code to clipboard.");
+                });
+        }
 
 
