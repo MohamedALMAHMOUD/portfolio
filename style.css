@@ -94,3 +94,6 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+ol.c {
+  list-style-type: upper-roman;
+}
