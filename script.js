@@ -14,5 +14,9 @@ function typeWriter() {
 }
 
 typeWriter();
+var codeEditor = ace.edit("code-editor");
+codeEditor.setTheme("ace/theme/monokai"); // définissez le thème souhaité
+codeEditor.session.setMode("ace/mode/javascript"); // spécifiez le langage de programmation approprié
+
 var code = codeEditor.getValue();
 console.log(code);
