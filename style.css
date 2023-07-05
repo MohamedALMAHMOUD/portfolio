@@ -97,7 +97,7 @@ img {vertical-align: middle;}
 ol.c {
   list-style-type: upper-roman;
 }
-code {
+textarea {
   width: 100%;
   padding: 20px;
   font-size: 15px;
