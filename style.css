@@ -98,15 +98,11 @@ ol.c {
   list-style-type: upper-roman;
 }
 pre {
-  width: 100%;
+  width: 80%;
   padding: 20px;
   font-size: 15px;
   outline: none;
   border: 1px solid #613bdb;
   border-radius: 10px;
-  background: #c1c9df;
-}
-.success {
-  color : green;
-  display: none;
+  background: #333;
 }
