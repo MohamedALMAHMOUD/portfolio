@@ -20,7 +20,7 @@ function copyCode(classText){
     document.querySelector('.success').style.display = 'block';
     setTimeout(()=> {
       document.querySelector('.success').style.display = 'none';
-    }, "2000")
+      }, "2000")
   });
 }
 copyCode(code)
