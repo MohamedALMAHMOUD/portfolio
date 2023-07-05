@@ -17,7 +17,10 @@ typeWriter();
 function copyCode(classText){
   const text = document.querySelector(`.${classText}`).ariaValueMax;
   navigator.clipboard.writeText(text).then(function(){
-    alert('code copié');
+    document.querySelector('.success').style.display = 'block';
+    setTimeout(()=> {
+      document.querySelector('.success').style.display = 'none';
+    }, "2000")
   });
 }
 copyCode(code)

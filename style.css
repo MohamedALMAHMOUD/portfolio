@@ -106,3 +106,7 @@ pre {
   border-radius: 10px;
   background: #c1c9df;
 }
+.success {
+  color : green;
+  display: none;
+}
