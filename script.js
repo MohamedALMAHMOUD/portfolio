@@ -14,15 +14,26 @@ function typeWriter() {
 }
 
 typeWriter();
+var toCopy  = document.getElementById( 'to-copy' ),
+    btnCopy = document.getElementById( 'copy' ),
+    paste   = document.getElementById( 'cleared' );
 
-let editor = document.querySelector("pre");
-let button = document.querySelector("button");
-button.addEventListener('click', () => {
-  console.log('Je suis cliqué');
-});
-button.addEventListener('click', () => {
-  editor.select();
-  // document.execCommand("copy"); méthode numéro 1
-  navigator.clipboard.writeText(editor.value); // méthode numéro 2
-  button.innerText = "Copié !";
-});
+btnCopy.addEventListener( 'click', function(){
+  toCopy.select();
+  paste.value = '';
+  
+  if ( document.execCommand( 'copy' ) ) {
+      btnCopy.classList.add( 'copied' );
+    paste.focus();
+    
+      var temp = setInterval( function(){
+        btnCopy.classList.remove( 'copied' );
+        clearInterval(temp);
+      }, 600 );
+    
+  } else {
+    console.info( 'document.execCommand went wrong…' )
+  }
+  
+  return false;
+} );
