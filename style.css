@@ -120,3 +120,23 @@ pre {
   opacity: 1;
   transform: translateY(-2em);
 }
+button {
+  font-size: 1em;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+button {
+  position: relative;
+  padding: 8px 20px;
+  border: 0;
+  font-size: 0.835em;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  font-weight: bold;
+  color: #FFF;
+  background: #8fa423;
+  transition: background .275s;
+}
+button:hover,
+button:focus {
+  background: #74861A;
+}
