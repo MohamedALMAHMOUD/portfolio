@@ -44,4 +44,11 @@ typeWriter();
   }
   // Coller le texte sera inséré ici
 
-
+// Coller le texte
+collerTexte = (e) => {
+  e.preventDefault()
+  // On lit le contenu du clipboad qu'on affecte au <textarea>
+  navigator.clipboard.readText().then((texte) => {
+      textarea_texte.value = texte
+  })
+}
