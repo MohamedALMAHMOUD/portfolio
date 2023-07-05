@@ -106,3 +106,7 @@ pre {
   border-radius: 10px;
   background: #333;
 }
+#HTMLBox {
+  width: 300px; /* Définir la largeur souhaitée */
+  height: 200px; /* Définir la hauteur souhaitée */
+}
