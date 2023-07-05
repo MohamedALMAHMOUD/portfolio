@@ -106,37 +106,3 @@ pre {
   border-radius: 10px;
   background: #c1c9df;
 }
-
-.copiedtext {
-  position: absolute;
-  left: 0; top: 0; right: 0;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(-1em);
-  color: #000;
-  transition: all .500s;
-}
-.copied .copiedtext {
-  opacity: 1;
-  transform: translateY(-2em);
-}
-button {
-  font-size: 1em;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-}
-button {
-  position: relative;
-  padding: 8px 20px;
-  border: 0;
-  font-size: 0.835em;
-  text-transform: uppercase;
-  letter-spacing: 0.125em;
-  font-weight: bold;
-  color: #FFF;
-  background: #8fa423;
-  transition: background .275s;
-}
-button:hover,
-button:focus {
-  background: #74861A;
-}

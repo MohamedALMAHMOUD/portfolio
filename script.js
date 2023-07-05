@@ -14,26 +14,9 @@ function typeWriter() {
 }
 
 typeWriter();
-var toCopy  = document.getElementById( 'to-copy' ),
-    btnCopy = document.getElementById( 'copy' ),
-    paste   = document.getElementById( 'cleared' );
-
-btnCopy.addEventListener( 'click', function(){
-  toCopy.select();
-  paste.value = '';
-  
-  if ( document.execCommand( 'copy' ) ) {
-      btnCopy.classList.add( 'copied' );
-    paste.focus();
-    
-      var temp = setInterval( function(){
-        btnCopy.classList.remove( 'copied' );
-        clearInterval(temp);
-      }, 600 );
-    
-  } else {
-    console.info( 'document.execCommand went wrong…' )
-  }
-  
-  return false;
-} );
+function copyCode(classText){
+  const text = document.querySelector(`.${classText}`).ariaValueMax;
+  navigator.clipboard.writeText(text).then(function(){
+    alert('code copié');
+  });
+}
