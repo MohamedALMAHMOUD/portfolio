@@ -15,7 +15,7 @@ function typeWriter() {
 
 typeWriter();
 
-let editor = document.querySelector("textarea");
+let editor = document.querySelector("pre");
 let button = document.querySelector("button");
 button.addEventListener('click', () => {
   console.log('Je suis cliqué');
