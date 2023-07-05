@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="https://mohamedalmahmoud.github.io/portfolio/style.css">
-    <link rel="stylesheet" href="../prism.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -51,7 +50,7 @@
           }
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 2000); // Change image every 2 seconds
+          setTimeout(showSlides, 3000); // Change image every 3 seconds
         }
         </script>
     <header>
@@ -75,12 +74,15 @@
                        en parallèle. Tout cela m'a permis de me reconvertir facilment en Data
                         science en début de 2021. C'est l'effet de boule de neige. Voici un apperçu
                          des mes compétences polyvalentes:</p>
-                         <pre>
+                         <pre id="form-copier-coller">
                           <code STYLE="text-align:left;padding:0;margin:0;">
                             import pandas as pd
                             df = pd.read_csv("file.csv")
                             print(df)
                           </code>
+                          <button onclick="copierTexte(event)" >Copier le code</button>
+                          <!-- bouton coller -->
+                          <button onclick="collerTexte(event)" >Coller le code</button>
                           </pre>
 
                         
@@ -93,7 +95,6 @@
 
     </main>   
 <script src="script.js"></script>
-<script src="prism.js"></script>
 
 </body>
 </html>
