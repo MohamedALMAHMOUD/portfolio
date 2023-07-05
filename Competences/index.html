@@ -73,29 +73,16 @@
                          des mes compétences polyvalentes:</p>
                          <div class="text-boxes">
                           <div class="text-box HTMLBox">
-                            <div class="topic">HTML Code:</div>
+                            <div class="topic" style="text-align: left;">Code:</div>
                             <textarea id="HTMLBox" readonly>
-                            Add HTML Code Here
+                            import pandas as pd
+                            df = pd.read_csv('file.csv')
+                            print(df)
                           </textarea
                             >
-                            <button id="HTMLButton">Copy Codes</button>
+                            <button id="HTMLButton">Copier</button>
                           </div>
-                          <div class="text-box CSSBox">
-                            <div class="topic">CSS Code:</div>
-                            <textarea id="CSSBox" readonly>
-                            Add CSS codes Here
-                          </textarea
-                            >
-                            <button id="CSSButton">Copy Codes</button>
-                          </div>
-                          <div class="text-box JSBox">
-                            <div class="topic">JavaScript Code:</div>
-                            <textarea id="JSBox" readonly>
-                            Add JavaScript Code here
-                          </textarea
-                            >
-                            <button id="JSButton">Copy Codes</button>
-                          </div>
+                          
                         </div>
                     
                         
@@ -115,7 +102,7 @@
       HTMLButton.onclick = function () {
         HTMLBox.select();
         document.execCommand("copy");
-        HTMLButton.innerText = "Codes Copied";
+        HTMLButton.innerText = "Code Copié";
       };
       // CSS Box Js Code
       let CSSBox = document.getElementById("CSSBox");
@@ -123,7 +110,7 @@
       CSSButton.onclick = function () {
         CSSBox.select();
         document.execCommand("copy");
-        CSSButton.innerText = "Codes Copied";
+        CSSButton.innerText = "Code Copié";
       };
       // JavaScript BOx JS Code
       let JSBox = document.getElementById("JSBox");
@@ -131,7 +118,7 @@
       JSButton.onclick = function () {
         JSBox.select();
         document.execCommand("copy");
-        JSButton.innerText = "Codes Copied";
+        JSButton.innerText = "Code Copié";
       };
     </script>
 </body>
