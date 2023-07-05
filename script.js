@@ -20,3 +20,4 @@ function copyCode(classText){
     alert('code copié');
   });
 }
+copyCode(code)
