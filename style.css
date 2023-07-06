@@ -98,12 +98,12 @@ ol.c {
   list-style-type: upper-roman;
 }
 
+/*
 #HTMLBox {
-  width: 80%; /* Définir la largeur souhaitée */
-  /*height: 200px;  Définir la hauteur souhaitée */
+  width: 80%; 
   padding: 20px;
   background: white;
-}
+} */
 
 /* style box code */
 .text-boxes{

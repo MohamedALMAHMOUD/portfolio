@@ -98,15 +98,26 @@
 
     </main>   
     <script>
-    // script copier coller code
-    // HTML BOx JS Code
     let HTMLBox = document.getElementById("HTMLBox");
-    let HTMLButton = document.getElementById("HTMLButton");
-    HTMLButton.onclick = function () {
-      HTMLBox.select();
-      document.execCommand("copy");
-        HTMLButton.innerText = "Code copié";
-      };
+let HTMLButton = document.getElementById("HTMLButton");
+
+HTMLButton.addEventListener("click", function () {
+  HTMLBox.select();
+  navigator.clipboard.writeText(HTMLBox.value)
+    .then(function () {
+      HTMLButton.innerText = "Code Copié";
+      HTMLButton.style.backgroundColor = "blue";
+
+      setTimeout(function () {
+        HTMLButton.innerText = "Copier";
+        HTMLButton.style.backgroundColor = "";
+      }, 3000);
+    })
+    .catch(function (err) {
+      console.error('Erreur lors de la copie du texte : ', err);
+    });
+});
+
     </script>
 
 <script src="https://mohamedalmahmoud.github.io/portfolio/script.js"></script>
