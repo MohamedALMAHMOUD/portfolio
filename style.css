@@ -97,16 +97,7 @@ img {vertical-align: middle;}
 ol.c {
   list-style-type: upper-roman;
 }
-/* pre {
-  width: 80%;
-  padding: 20px;
-  margin-left: 20px;
-  font-size: 15px;
-  outline: none;
-  border: 1px solid #613bdb;
-  border-radius: 10px;
-  background: white;
-} */
+
 #HTMLBox {
   width: 80%; /* Définir la largeur souhaitée */
   /*height: 200px;  Définir la hauteur souhaitée */
@@ -181,7 +172,7 @@ code[class*="language-"] {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
   text-align: left;
-  /*white-space: pre;*/
+  white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
