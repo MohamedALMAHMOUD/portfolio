@@ -149,7 +149,7 @@ ol.c {
     width: 100%;
   }
 }
-/* style color code */
+/* style color code 
 pre[class*="language-"],
 code[class*="language-"] {
   color: #000;
@@ -158,7 +158,7 @@ code[class*="language-"] {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
   text-align: left;
-  margin-left: 20px;
+  margin-left: -120px;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
@@ -182,4 +182,4 @@ pre[class*="language-"]::selection,
 code[class*="language-"]::selection {
   text-shadow: none;
   background: #b3d4fc;
-}
+}*/
