@@ -73,8 +73,6 @@
                          des mes compétences polyvalentes:</p>
                          <div class="text-boxes">
                           <div class="text-box HTMLBox">
-                          <pre>
-                            <code class="language-python">
                             <textarea id="HTMLBox" readonly>
                               
                             import pandas as pd
@@ -82,7 +80,6 @@
                             print(df)
                            
                           </textarea>
-                         </code></pre>
                             <button id="HTMLButton">Copier</button>
                           </div>
                         
@@ -99,24 +96,12 @@
     </main>   
     <script>
     let HTMLBox = document.getElementById("HTMLBox");
-let HTMLButton = document.getElementById("HTMLButton");
-
-HTMLButton.addEventListener("click", function () {
-  HTMLBox.select();
-  navigator.clipboard.writeText(HTMLBox.value)
-    .then(function () {
-      HTMLButton.innerText = "Code Copié";
-      HTMLBox.style.backgroundColor = "blue";
-
-      setTimeout(function () {
-        HTMLButton.innerText = "Copier";
-        HTMLButton.style.backgroundColor = "";
-      }, 3000);
-    })
-    .catch(function (err) {
-      console.error('Erreur lors de la copie du texte : ', err);
-    });
-});
+    let HTMLButton = document.getElementById("HTMLButton");
+      HTMLButton.onclick = function () {
+        HTMLBox.select();
+        document.execCommand("copy");
+        HTMLButton.innerText = "Codes Copied";
+      };
 
     </script>
 
