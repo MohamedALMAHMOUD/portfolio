@@ -109,5 +109,6 @@ pre {
 #HTMLBox {
   width: 80%; /* Définir la largeur souhaitée */
   /*height: 200px;  Définir la hauteur souhaitée */
-  padding: auto;
+  padding: 20px;
+  background: white;
 }
