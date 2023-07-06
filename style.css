@@ -98,13 +98,6 @@ ol.c {
   list-style-type: upper-roman;
 }
 
-/*
-#HTMLBox {
-  width: 80%; 
-  padding: 20px;
-  background: white;
-} */
-
 /* style box code */
 .text-boxes{
   height: 100%;
@@ -121,19 +114,12 @@ ol.c {
   width: 100%;
   margin: 15px 0;
 }
-/*
-.text-boxes .text-box .topic{
-  font-size: 18px;
-  font-weight: 600;
-  color: #265df2;
-  margin: 4px;
-}*/
+
 .text-boxes .text-box textarea{
   height: 100%;
   width: 100%;
   padding: 20px;
   font-size: 15px;
-  font-weight: 400;
   outline: none;
   border: 1px solid #265df2;
   border-radius: 8px;
@@ -151,7 +137,6 @@ ol.c {
   border: none;
   border-radius: 8px;
   font-size: 17px;
-  font-weight: 400;
   margin: 8px 0;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -173,14 +158,13 @@ code[class*="language-"] {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: 1em;
   text-align: left;
-  white-space: pre;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
