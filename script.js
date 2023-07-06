@@ -14,3 +14,19 @@ function typeWriter() {
 }
 
 typeWriter();
+
+
+// script copier coller code
+// HTML BOx JS Code
+let HTMLBox = document.getElementById("HTMLBox");
+let HTMLButton = document.getElementById("HTMLButton");
+HTMLButton.onclick = function () {
+  HTMLBox.select();
+  navigator.clipboard.writeText(HTMLBox.value)
+    .then(function () {
+      HTMLButton.innerText = "Code Copié";
+    })
+    .catch(function (error) {
+      console.error("Erreur lors de la copie du texte : ", error);
+    });
+};
