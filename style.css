@@ -119,18 +119,19 @@ ol.c {
   height: 380px;
   max-width: 660px;
   width: 100%;
-  margin: 55px 0;
+  margin: 15px 0;
 }
+/*
 .text-boxes .text-box .topic{
   font-size: 18px;
   font-weight: 600;
   color: #265df2;
   margin: 4px;
-}
+}*/
 .text-boxes .text-box textarea{
   height: 100%;
   width: 100%;
-  padding: 30px;
+  padding: 20px;
   font-size: 15px;
   font-weight: 400;
   outline: none;
