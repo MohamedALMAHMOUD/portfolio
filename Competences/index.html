@@ -104,14 +104,9 @@
     let HTMLButton = document.getElementById("HTMLButton");
     HTMLButton.onclick = function () {
       HTMLBox.select();
-      navigator.clipboard.writeText(HTMLBox.value)
-        .then(function () {
-          HTMLButton.innerText = "Code Copié";
-        })
-        .catch(function (error) {
-          console.error("Erreur lors de la copie du texte : ", error);
-        });
-    };
+      document.execCommand("copy");
+        HTMLButton.innerText = "Code copié";
+      };
     </script>
 
 <script src="https://mohamedalmahmoud.github.io/portfolio/script.js"></script>
