@@ -106,7 +106,7 @@ HTMLButton.addEventListener("click", function () {
   navigator.clipboard.writeText(HTMLBox.value)
     .then(function () {
       HTMLButton.innerText = "Code Copié";
-      HTMLButton.style.backgroundColor = "blue";
+      HTMLBox.style.backgroundColor = "blue";
 
       setTimeout(function () {
         HTMLButton.innerText = "Copier";
