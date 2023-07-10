@@ -6,10 +6,12 @@
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="https://mohamedalmahmoud.github.io/portfolio/style.css">
     
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+    <script type="text/javascript" src="../brython.js"></script>
 
 
   </head>
-<body>
+<body onload="brython()">
     <!-- Votre contenu ici -->
     <center><h1>Mohamed ALMAHMOUD</h1><h4>Data scientist | Data analyst </h4><h6>Docteur en didactique des mathématiques</h6></center>
     <div class="slideshow-container">
@@ -70,25 +72,18 @@
                        l'apprentissage des languages de programmation, etc. se développaient 
                        en parallèle. Tout cela m'a permis de me reconvertir facilment en Data
                         science en début de 2021. C'est l'effet de boule de neige. Voici un apperçu
-                         des mes compétences polyvalentes:</p>
-                         <div class="text-boxes">
-                          <div class="text-box HTMLBox">
-                            <textarea id="HTMLBox" readonly>
-                              
-                            import pandas as pd
-                            df = pd.read_csv('file.csv')
-                            print(df)
-                           
-                          </textarea>
-                            <button id="HTMLButton">Copier</button>
-                          </div>
-                        
-                        </div>
-                    
+                         des mes compétences polyvalentes:</p>                   
                         
                 <ol class="c">
                     <li>Python</li>
-                    <li>Wordpress</li>
+                    <p>Je suis fasciné par la résolution des CLASH of CODE sur le site <a href="https://bit.ly/3XOasgz"> CodInGame</a>. 
+                      J'arrive au niveau 25 où j'ai résolu plus de 70 quiz en Python. De plus, je suis un certificat en Python. 
+                      Voici un de mes codes pour un quiz: Il s'agit </p>
+                     <py-script src = passeword.py>
+
+                     </py-script>
+                     <div id = "mytext">Here</div>
+                      <iframe src="https://trinket.io/embed/python/1f42d2de8d?toggleCode=true&runOption=run" width="70%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>                      <li>Wordpress</li>
                     <li>Applications</li>
                 </ol>
         </section>
@@ -100,7 +95,7 @@
       HTMLButton.onclick = function () {
         HTMLBox.select();
         document.execCommand("copy");
-        HTMLButton.innerText = "Codes Copied";
+        HTMLButton.innerText = "Code copié";
       };
 
     </script>
