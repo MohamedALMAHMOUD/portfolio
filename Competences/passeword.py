@@ -1,10 +1,17 @@
-def passeword(text):
-  flag=0;
-  if len(text)<=15:
-    flag = 1
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route('/mdp', methods=['POST'])
+def passeword(mdp):
+  mdp = request.form['mdp']
+  cond = "votre mot de passe ne respecte pas les conditions requises"
+  flag= cond
+  if len(mdp)<=15:
+    flag = "votre mot de passe respecte bien les conditions requises"
   else:
     u=l=d=0
-    for i in text:
+    for i in mdp:
       if i.isupper():
         u+=1
       if i.islower():
@@ -12,8 +19,15 @@ def passeword(text):
       if i.isdigit():
           d+=1
     if u < 1 or l < 1 :
-      flag = 1
+      flag = cond
     if d < 5:
-        flag = 1
-  return flag
-pyscript.write("mytext","Votre mot de passe ne respecte pas les conditions requises" if passeword(input("Enrez votre mot de passe"))==1 else "Votre mot de passe est parfait")
+        flag = cond
+  print(flag)
+  return render_template('index.html')
+
+@app.route("/")
+def index():
+  return render_template('index.html')
+
+if __name__ == "__main__":
+  uvicorn.run(app, host="127.0.0.1", port=8000)
