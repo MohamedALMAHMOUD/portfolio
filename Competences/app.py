@@ -9,7 +9,7 @@ app = Flask(__name__)
 def index():
   return render_template('index.html')
 
-@app.route('/result', methods=['POST', 'GET'])
+@app.route('/result', methods=['POST'])
 def result():
     output = request.form.to_dict()
     mdp = output['mdp']
