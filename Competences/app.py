@@ -10,10 +10,10 @@ def index():
 
 @app.route('/', methods=['POST'])
 def result():
-    output = request.form.to_dict()
-    mdp = output['mdp']
-    resultat = passeword(mdp)
-    return render_template('index.html', resultat=resultat)
+  output = request.form.to_dict()
+  mdp = output['mdp']
+  resultat = passeword(mdp)
+  return render_template('index.html', resultat=resultat)
 
 if __name__ == '__main__':
-    app.run(port=8000)
+  app.run(port=8000, debug=True)
