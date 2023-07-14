@@ -17,4 +17,4 @@ def result():
   return render_template('index.html', resultat=resultat)
 
 if __name__ == '__main__':
-  sere(app, host='0.0.0.0', port=50100, threads=1, url_prefix="/my-app")
+  serve(app, host='0.0.0.0', port=50100, threads=1, url_prefix="/my-app")
