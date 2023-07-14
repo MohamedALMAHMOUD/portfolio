@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from passeword import passeword
-
+from waitress import serve
+from concurrent.futures import thread
 app = Flask(__name__)
 
 
@@ -16,4 +17,4 @@ def result():
   return render_template('index.html', resultat=resultat)
 
 if __name__ == '__main__':
-  app.run()
+  sere(app, host='0.0.0.0', port=50100, threads=1, url_prefix="/my-app")
