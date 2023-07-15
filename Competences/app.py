@@ -17,10 +17,5 @@ def result():
   return render_template('index.html', resultat=resultat)
 
 if __name__ == '__main__':
-  mode = "dev"
-
-if __name__ == '__main__':
-    if mode == "dev":
-        app.run(host='0.0.0.0', port=50100, debug=True)
-    else:
-        serve(app, host='0.0.0.0', port=50100, threads=1)
+  port = int(os.environ.get('PORT', 5000))
+  app.run(host='0.0.0.0', port=port)
