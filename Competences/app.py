@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request
+from flask_frozen import Freezer
+from myapplication import app
 from passeword import passeword
 from waitress import serve
 from concurrent.futures import thread
-app = Flask(__name__)
+freeze = Freeze(app)
 
 
 @app.route('/')
@@ -15,12 +17,6 @@ def result():
   mdp = output['mdp']
   resultat = passeword(mdp)
   return render_template('index.html', resultat=resultat)
-wsgi_app = app.wsgi_app
+
 if __name__ == '__main__':
-  import os
-  HOST = os.environ.get('SERVER_HOST', 'localhost')
-  try:
-      PORT = int(os.environ.get('SERVER_PORT', '5555'))
-  except ValueError:
-      PORT = 5555
-  app.run(HOST, PORT)
+  freezer.freeze()
