@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from passeword import passeword
 from waitress import serve
 from concurrent.futures import thread
-freeze = Freeze(app)
+app = Flask(__name__)
 
 
 @app.route('/')
@@ -14,7 +14,7 @@ def result():
   output = request.form.to_dict()
   mdp = output['mdp']
   resultat = passeword(mdp)
-  return render_template('index.html', resultat=resultat)
+  return render_template('result.html', resultat=resultat)
 
 if __name__ == '__main__':
   app.run()
