@@ -1,20 +1,25 @@
 // script.js
 
-// Ajoutez votre code JavaScript ici
+// Sélectionne l'élément avec la classe "type-machine"
 const textElement = document.querySelector('.type-machine');
-const textToType = textElement.getAttribute('data-text');
+
+// Récupère le texte à afficher depuis le contenu de l'élément
+const textToType = textElement.textContent;
+
 let index = 0;
 
+// Fonction pour simuler l'effet de machine à écrire
 function typeWriter() {
-  if (textElement) {
-    if (index < textToType.length) {
-      textElement.textContent += textToType.charAt(index);
-      index++;
-      setTimeout(typeWriter, 50); // Vitesse de défilement du texte (en millisecondes)
-    }
+  if (index < textToType.length) {
+    // Ajoute le caractère courant au texte de l'élément
+    textElement.textContent = textToType.substring(0, index + 1);
+    index++;
+    // Appelle la fonction typeWriter de manière récursive avec un délai de 50 millisecondes
+    setTimeout(typeWriter, 50);
   }
 }
 
+// Appelle la fonction typeWriter pour démarrer l'effet de machine à écrire
 typeWriter();
 
 // carousel
@@ -44,7 +49,7 @@ function showSlides() {
   }
   
   setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
+  }
 
 
 showSlides();
