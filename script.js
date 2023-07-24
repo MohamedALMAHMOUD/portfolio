@@ -56,7 +56,7 @@ showSlides();
 
 // Sending request Fonction
 function sendRequest() {
-  var password = document.getElementsByName("password")[0].value;
+  var password = document.getElementsByName("mdp")[0].value;
   
   var xhr = new XMLHttpRequest();
   xhr.open("POST", "https://flask-ahaz.onrender.com/api/check_password", true);
