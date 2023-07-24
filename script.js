@@ -65,7 +65,7 @@ function sendRequest() {
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
       var response = JSON.parse(xhr.responseText);
-      document.getElementById("responseDiv").innerText = response.result;
+      document.getElementById("responseDiv").innerText = response.resultat;
     }
   };
   xhr.send(JSON.stringify({ "mdp": password }));
