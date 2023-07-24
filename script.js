@@ -56,6 +56,7 @@ showSlides();
 
 // Sending request Fonction
 function sendRequest() {
+  console.log("Function sendRequest() called");
   var password = document.getElementsByName("mdp")[0].value;
   
   var xhr = new XMLHttpRequest();
