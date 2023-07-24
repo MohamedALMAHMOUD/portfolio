@@ -71,4 +71,4 @@ function sendRequest() {
 }
 
 // Calling the fonction sendRequest
-sendRequest();
+//sendRequest();
