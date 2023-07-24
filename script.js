@@ -1,25 +1,25 @@
 // script.js
 
-// Sélectionne l'élément avec la classe "type-machine"
+// Sellection of the classe "type-machine"
 const textElement = document.querySelector('.type-machine');
 
-// Récupère le texte à afficher depuis le contenu de l'élément
+// Recovering text to show from the contenu of element
 const textToType = textElement.textContent;
 
 let index = 0;
 
-// Fonction pour simuler l'effet de machine à écrire
+// Effect of type machine 
 function typeWriter() {
   if (index < textToType.length) {
-    // Ajoute le caractère courant au texte de l'élément
+    //Adding caracter by caracter
     textElement.textContent = textToType.substring(0, index + 1);
     index++;
-    // Appelle la fonction typeWriter de manière récursive avec un délai de 50 millisecondes
+    // Time of typing 50 ms
     setTimeout(typeWriter, 50);
   }
 }
 
-// Appelle la fonction typeWriter pour démarrer l'effet de machine à écrire
+// Calling the fonction typeWriter
 typeWriter();
 
 // carousel
@@ -53,3 +53,22 @@ function showSlides() {
 
 
 showSlides();
+
+// Sending request Fonction
+function sendRequest() {
+  var password = document.getElementsByName("password")[0].value;
+  
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", "https://flask-ahaz.onrender.com/api/check_password", true);
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var response = JSON.parse(xhr.responseText);
+      document.getElementById("responseDiv").innerText = response.result;
+    }
+  };
+  xhr.send(JSON.stringify({ "mdp": password }));
+}
+
+// Calling the fonction sendRequest
+sendRequest();
