@@ -71,5 +71,9 @@ function sendRequest() {
   xhr.send(JSON.stringify({ "mdp": password }));
 }
 
-// Calling the fonction sendRequest
-//sendRequest();
+// toggling an image
+function basculerImageAutomatique() {
+  console.log("Function setInterval(basculerImageAutomatique, 5000) called");
+  var image = document.getElementById("monImage");
+  image.classList.toggle("bascule");
+}

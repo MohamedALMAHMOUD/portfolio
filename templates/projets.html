@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <!-- Votre contenu ici -->
     <center><h1>Mohamed ALMAHMOUD</h1><h4>Data scientist | Data analyst </h4><h6>Docteur en didactique des mathématiques</h6></center>
     <div class="slideshow-container">
         <div class="mySlides fade">
@@ -32,8 +31,8 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
-                <li><a href="#">Projets</a></li>
                 <li><a href="competences.html">Compétences</a></li>
+                <li><a href="#">Projets</a></li>
                 <li><a href="cv.html">CV</a></li>
             </ul>
         </nav>
@@ -44,8 +43,14 @@
             <h2>Projets</h2>
             <div class="type-machine">Bienvenue dans ma page de projets ! .</div>
 
-            <!-- Contenu de la section projets -->
             <p>Contenu du projet 1</p>
+            <form  id = "passwordForm" >
+                <label>  Entrez votre mot de passe:   <input id = "mdp" type="text" name="mdp"></label>
+                <button type="button" onclick="sendRequest()">Vérifier votre mot de passe</button>
+            </form>
+            <center>
+                <div id="responseDiv">En attente de la réponse...</div>                    
+            </center>
             <p>Contenu du projet 2</p>
         </section>        
     </main>

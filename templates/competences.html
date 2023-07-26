@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <!-- Votre contenu ici -->
     <center><h1>Mohamed ALMAHMOUD</h1><h4>Data scientist | Data analyst </h4><h6>Docteur en didactique des mathématiques</h6></center>
     <div class="slideshow-container">
         <div class="mySlides fade">
@@ -32,8 +33,8 @@
         <nav>
             <ul>
                 <li><a href="../index.html">Accueil</a></li>
-                <li><a href="projets.html">Projets</a></li>
                 <li><a href="#">Compétences</a></li>
+                <li><a href="projets.html">Projets</a></li>
                 <li><a href="cv.html">CV</a></li>
             </ul>
         </nav>
@@ -42,28 +43,35 @@
 
         <section id="competences">
             <h2>Compétences</h2>
-                <p>Depuis 2012, je cumule des compéténces polyvalents. En effet,
-                     alors que je me suis concentré sur ma thèse à l'époque,
-                      la création des sites internet, la création des applications,
-                       l'apprentissage des languages de programmation, etc. se développaient 
-                       en parallèle. Tout cela m'a permis de me reconvertir facilment en Data
+                <p>Depuis 2012, je cumule des compéténces polyvalents. Alors que je me concentrais sur ma thèse à l'époque,
+                      je m'amusais en parallèle à apprendre la création des sites internet, la création des applications,
+                       l'apprentissage des langages de programmation, etc.  Tout cela m'a permis de me reconvertir facilment en Data
                         science en début de 2021. C'est l'effet boule de neige. Voici un apperçu
                          des mes compétences polyvalentes:</p>                   
                         
                 <ol class="c">
-                    <li>Python</li>
-                    <div class ="type-machine">Je fais ce paragraphe en utilisant plusieurs scripts et langages de programmation ou framework: html, css, js, python, flask</div>
-                    <p>Je suis fasciné par la résolution des CLASH of CODE sur le site <a href="https://bit.ly/3XOasgz"> CodInGame</a>. 
-                      J'arrive au niveau 25 où j'ai résolu plus de 70 quiz en Python. De plus, je suis un certificat en Python. 
-                      Voici un de mes codes pour un quiz: Il s'agit </p>
+                    <li>Langages et framework</li>
+                    <table>
+                      <colgroup>
+
+                        <col>
+                        <col style="width:700px">
+                        
+                      </colgroup>
+                        
+                      <tr>
+                        <td>
+                        <div class ="type-machine">Je fais ce paragraphe en utilisant plusieurs scripts et langages de programmation ou framework: html, css, js, python, flask.
+                        Je suis fasciné par la résolution des CLASH of CODE sur le site <a href="https://bit.ly/3XOasgz"> CodInGame</a>. 
+                          J'arrive au niveau 25 où j'ai résolu plus de 70 quiz en Python. De plus, je suis un certificat en Python. 
+                          Voici un de mes codes pour un quiz: Il s'agit </div>
+                        </td>
+                        <td>
+                        <div class = "container"><img class ="bellImg" src="../images/langages_framework.png" alt="Image"> </div>
+                        </td>
+                      </tr>
                      
-                     <form  id = "passwordForm" >
-                      <label>  Entrez votre mot de passe:   <input id = "mdp" type="text" name="mdp"></label>
-                      <button type="button" onclick="sendRequest()">Vérifier votre mot de passe</button>
-                      </form>
-                      <center>
-                      <div id="responseDiv">En attente de la réponse...</div>                    
-                      </center>
+                    </table>
                       <br><br>
                       <iframe src="https://trinket.io/embed/python/1f42d2de8d?toggleCode=true&runOption=run" width="70%" height="400" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>                      <li>Wordpress</li>
                     <li>Applications</li>
@@ -71,8 +79,6 @@
         </section>
 
     </main>   
-
-   
   <script src="../script.js"></script>
 
 </body>
