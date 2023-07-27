@@ -43,7 +43,27 @@
             <h2>Projets</h2>
             <div class="type-machine">Bienvenue dans ma page de projets ! .</div>
 
-            <p>Contenu du projet 1</p>
+            <h4>Projet 1: Flask API</h4>
+            <p>
+                J'essayais d'éxecuter un code python, ici, dans les pages GitHub. 
+                Le code de python tente de vérifier si l'entrée d'un "input" respecte bien certaines conditions:<br>
+                - avoir au moins une Majuscule;<br>
+                - avoir au moins 5 chiffres;<br>
+                - avoir moins de 15 caractères<br>
+                Mais malheureusement, ces pages sont statistiques et n'acceptent pas le script python.
+                Donc, il faut un serveur python pour éxecuter le code. La solution est d'utiliser un mini framework flask.
+                Aussi, on a besoin de déployer flask en ligne (production).
+                Je cherchais une solution gratuite et une alternative à Herkou qui devient pyant. 
+                Heureusement, <a href="https://render.com/">Render</a> est là pour déployer mon projet hébergé sur GitHub.
+                On peut trouver le projet complet <a href="https://github.com/MohamedALMAHMOUD/flaskapi"> ICI</a>. 
+                Pour tester directement le projet c'est simple, on peut aller sur <a href ="https://flask-ahaz.onrender.com"> le site</a>,
+                on tape un mot de passe et on appuie sur le bouton. Ensuite, on aura le résultat si le mot de passe respecte ou non les conditions requises.
+                Aussi, je voluais integrer le projet, ici, dans mon portfolio. C'est-à-dire, je veux utiliser une API pour communiquer un front end (mon portfolio)
+                et un back end , le serveur python (Render). Enfin, en tapant un mot de passe dans le cadre ci-dessous puis cliquer sur le bouton, une requette HTTP envoie
+                le mot de passe au serveur deployé sur Render via l'API. On reçoit la réponse et l'affiche juste en dessous du cadre.
+
+                
+            </p>
             <form  id = "passwordForm" >
                 <label>  Entrez votre mot de passe:   <input id = "mdp" type="text" name="mdp"></label>
                 <button type="button" onclick="sendRequest()">Vérifier votre mot de passe</button>
@@ -51,7 +71,8 @@
             <center>
                 <div id="responseDiv">En attente de la réponse...</div>                    
             </center>
-            <p>Contenu du projet 2</p>
+            <h4>Projet 2</h4>
+            <p> Projet en cours. Vous pouvez regarder tous mes projets sur <a href="https://github.com/MohamedALMAHMOUD"> GitHub</a></p>
         </section>        
     </main>
 

@@ -3,7 +3,7 @@
 /* Styles généraux */
 body {
   font-family: Arial, sans-serif;
-  margin: 10px 0 10px 0;
+  margin: 0;
   padding: 10px;
   background: #23E3C9;
 }
@@ -145,8 +145,7 @@ ol.c {
 
 .container {
   position: relative;
-  height: 40%;
-  width: 40%;
+  width: 300px;
   margin: auto;
   /* right: 10px; commented for demo */
   top: 18px;
@@ -161,7 +160,7 @@ ol.c {
 }
 .bellImg {
   height: 100%;
-  width: 100%;  
+  width: 300px;  
   transform: rotate(-10deg);
   animation-name: rotate;
   animation-delay: 3s;
